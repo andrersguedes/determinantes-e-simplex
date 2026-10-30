@@ -1,6 +1,6 @@
-package br.edu.fatecgarca.determinantes;
+package br.edu.fatecgarca.determinantessimplex;
 
-import br.edu.fatecgarca.determinantes.calculos.Calculos;
+import br.edu.fatecgarca.determinantessimplex.calculos.Calculos;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;

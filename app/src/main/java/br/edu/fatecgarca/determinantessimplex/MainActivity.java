@@ -1,4 +1,4 @@
-package br.edu.fatecgarca.determinantes;
+package br.edu.fatecgarca.determinantessimplex;
 
 import android.content.Intent;
 import android.os.Bundle;

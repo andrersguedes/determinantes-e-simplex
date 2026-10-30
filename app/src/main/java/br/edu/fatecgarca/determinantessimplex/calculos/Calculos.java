@@ -1,4 +1,4 @@
-package br.edu.fatecgarca.determinantes.calculos;
+package br.edu.fatecgarca.determinantessimplex.calculos;
 
 public class Calculos {
 

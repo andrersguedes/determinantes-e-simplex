@@ -6,6 +6,7 @@
 *.apk
 *.aar
 *.keystore
+*.jks
 
 # Eclipse
 .settings/

@@ -1,4 +1,4 @@
-package br.edu.fatecgarca.determinantes;
+package br.edu.fatecgarca.determinantessimplex;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import br.edu.fatecgarca.determinantes.calculos.Calculos;
+import br.edu.fatecgarca.determinantessimplex.calculos.Calculos;
 
 public class Det4 extends AppCompatActivity implements OnClickListener {
 

@@ -3,15 +3,15 @@ plugins {
 }
 
 android {
-    namespace = "br.edu.fatecgarca.determinantes"
+    namespace = "br.edu.fatecgarca.determinantessimplex"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "br.edu.fatecgarca.determinantes"
+        applicationId = "br.edu.fatecgarca.determinantessimplex"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 4
+        versionName = "2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
