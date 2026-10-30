@@ -34,6 +34,7 @@ fun MatrixCalculatorScreen(
     }
     var resultText by remember { mutableStateOf<String?>(null) }
     val calculos = remember { Calculos() }
+    val errorMessage = stringResource(R.string.fill_all_values_error)
 
     Scaffold(
         topBar = {
@@ -96,7 +97,7 @@ fun MatrixCalculatorScreen(
                     }
 
                     if (isEmpty) {
-                        Toast.makeText(context, context.getString(R.string.fill_all_values_error), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, errorMessage, Toast.LENGTH_SHORT).show()
                     } else {
                         val doubleArray = Array(dimension) { i ->
                             DoubleArray(dimension) { j ->

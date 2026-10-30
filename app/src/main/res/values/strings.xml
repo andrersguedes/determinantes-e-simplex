@@ -19,7 +19,7 @@
     <string name="mat4x4">Matrizes 4x4</string>
     <string name="simplex">Simplex</string>
     <string name="linear_programming">Programação Linear</string>
-    <string name="back_content_description">Back</string>
+    <string name="back_content_description">Voltar</string>
     <string name="simplex_maximize_label">Maximizar Z = c₁x₁ + c₂x₂</string>
     <string name="simplex_constraints_label">Restrições (≤ RHS)</string>
     <string name="simplex_solve_button">Resolver Simplex</string>

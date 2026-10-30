@@ -17,15 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="Det2"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name="Det3"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name="Det4"
-            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
