@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "determinantes"
+rootProject.name = "Determinantes e Simplex"
 include(":app")

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Determinantes</string>
+    <string name="app_name">Determinantes e Simplex</string>
     <string name="val">Informe os valores da matriz</string>
     <string name="det2">Determinante 2 x 2</string>
     <string name="det3">Determinante 3 x 3</string>
