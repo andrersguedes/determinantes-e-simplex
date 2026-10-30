@@ -12,9 +12,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import br.edu.fatecgarca.determinantessimplex.R
 import br.edu.fatecgarca.determinantessimplex.calculos.Calculos
 import br.edu.fatecgarca.determinantessimplex.ui.theme.DeterminantesSimplexTheme
 
@@ -38,7 +41,7 @@ fun MatrixCalculatorScreen(
                 title = { Text(title) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.Default.ArrowBack, contentDescription = stringResource(R.string.back_content_description))
                     }
                 }
             )
@@ -54,7 +57,7 @@ fun MatrixCalculatorScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Informe os valores da matriz",
+                text = stringResource(R.string.matrix_info_prompt),
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.primary
             )
@@ -74,6 +77,7 @@ fun MatrixCalculatorScreen(
                             modifier = Modifier
                                 .weight(1f)
                                 .height(56.dp)
+                                .testTag("cell_${i}_$j")
                         )
                     }
                 }
@@ -92,7 +96,7 @@ fun MatrixCalculatorScreen(
                     }
 
                     if (isEmpty) {
-                        Toast.makeText(context, "Digite todos os valores da matriz!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, context.getString(R.string.fill_all_values_error), Toast.LENGTH_SHORT).show()
                     } else {
                         val doubleArray = Array(dimension) { i ->
                             DoubleArray(dimension) { j ->
@@ -117,7 +121,7 @@ fun MatrixCalculatorScreen(
                 ),
                 shape = MaterialTheme.shapes.medium
             ) {
-                Text("Calcular", style = MaterialTheme.typography.titleMedium)
+                Text(stringResource(R.string.calc), style = MaterialTheme.typography.titleMedium)
             }
 
             if (resultText != null) {
@@ -133,7 +137,7 @@ fun MatrixCalculatorScreen(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = "Determinante:",
+                            text = stringResource(R.string.det),
                             style = MaterialTheme.typography.titleSmall
                         )
                         Spacer(modifier = Modifier.height(4.dp))

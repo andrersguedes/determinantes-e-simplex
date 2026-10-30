@@ -2,16 +2,23 @@
 appcompat = "1.8.0"
 coreKtx = "1.19.1"
 coreSplashscreen = "1.2.0"
+junit = "4.13.2"
+kotlinTest = "2.0.21"
 material = "1.14.0"
-compose = "2024.12.01"
-activityCompose = "1.10.0"
-navigationCompose = "2.8.5"
-lifecycleViewmodelCompose = "2.8.7"
+compose = "2026.09.00"
+activityCompose = "1.13.0"
+navigationCompose = "2.10.2"
+lifecycleViewmodelCompose = "2.11.0"
 
 [libraries]
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplashscreen" }
+androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+junit = { module = "junit:junit", version.ref = "junit" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlinTest" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose" }
 compose-ui = { group = "androidx.compose.ui", name = "ui" }

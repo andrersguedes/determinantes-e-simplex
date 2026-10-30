@@ -55,7 +55,7 @@ fun MainScreen(
                 ) {
                     CalculatorCard(
                         title = stringResource(R.string.det2),
-                        description = "Matrizes 2x2",
+                        description = stringResource(R.string.mat2x2),
                         icon = Icons.Default.GridOn,
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
                         contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -66,7 +66,7 @@ fun MainScreen(
                     )
                     CalculatorCard(
                         title = stringResource(R.string.det3),
-                        description = "Matrizes 3x3",
+                        description = stringResource(R.string.mat3x3),
                         icon = Icons.Default.Calculate,
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
                         contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -84,7 +84,7 @@ fun MainScreen(
                 ) {
                     CalculatorCard(
                         title = stringResource(R.string.det4),
-                        description = "Matrizes 4x4",
+                        description = stringResource(R.string.mat4x4),
                         icon = Icons.Default.Functions,
                         containerColor = MaterialTheme.colorScheme.primaryContainer,
                         contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -94,8 +94,8 @@ fun MainScreen(
                             .fillMaxHeight()
                     )
                     CalculatorCard(
-                        title = "Simplex",
-                        description = "Programação Linear",
+                        title = stringResource(R.string.simplex),
+                        description = stringResource(R.string.linear_programming),
                         icon = Icons.Default.Timeline,
                         containerColor = MaterialTheme.colorScheme.secondaryContainer,
                         contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
@@ -118,7 +118,7 @@ fun MainScreen(
             ) {
                 CalculatorCard(
                     title = stringResource(R.string.det2),
-                    description = "Cálculo de determinante para matrizes 2x2.",
+                    description = stringResource(R.string.det2_desc),
                     icon = Icons.Default.GridOn,
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -129,7 +129,7 @@ fun MainScreen(
                 )
                 CalculatorCard(
                     title = stringResource(R.string.det3),
-                    description = "Cálculo de determinante para matrizes 3x3.",
+                    description = stringResource(R.string.det3_desc),
                     icon = Icons.Default.Calculate,
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -140,7 +140,7 @@ fun MainScreen(
                 )
                 CalculatorCard(
                     title = stringResource(R.string.det4),
-                    description = "Cálculo de determinante para matrizes 4x4.",
+                    description = stringResource(R.string.det4_desc),
                     icon = Icons.Default.Functions,
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -150,8 +150,8 @@ fun MainScreen(
                         .weight(1f)
                 )
                 CalculatorCard(
-                    title = "Método Simplex",
-                    description = "Resolução de problemas de programação linear.",
+                    title = stringResource(R.string.simplex_title),
+                    description = stringResource(R.string.simplex_desc),
                     icon = Icons.Default.Timeline,
                     containerColor = MaterialTheme.colorScheme.secondaryContainer,
                     contentColor = MaterialTheme.colorScheme.onSecondaryContainer,

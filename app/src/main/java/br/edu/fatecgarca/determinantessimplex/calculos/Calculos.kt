@@ -1,36 +1,58 @@
 package br.edu.fatecgarca.determinantessimplex.calculos
 
-import kotlin.math.pow
+import kotlin.math.abs
 
 class Calculos {
 
-    fun det2(matriz: Array<DoubleArray>): Double {
-        return (matriz[0][0] * matriz[1][1]) - (matriz[0][1] * matriz[1][0])
+    /**
+     * Calculates the determinant of any N x N square matrix using Gaussian elimination with partial pivoting.
+     */
+    fun determinant(matrix: Array<DoubleArray>): Double {
+        val n = matrix.size
+        if (n == 0) return 0.0
+        if (n == 1) return matrix[0][0]
+        if (n == 2) return (matrix[0][0] * matrix[1][1]) - (matrix[0][1] * matrix[1][0])
+
+        // Deep copy of matrix to avoid mutating original input
+        val mat = Array(n) { i -> matrix[i].clone() }
+        var det = 1.0
+        val eps = 1e-12
+
+        for (i in 0 until n) {
+            var pivot = i
+            for (j in i + 1 until n) {
+                if (abs(mat[j][i]) > abs(mat[pivot][i])) {
+                    pivot = j
+                }
+            }
+
+            if (abs(mat[pivot][i]) < eps) {
+                return 0.0
+            }
+
+            if (pivot != i) {
+                val temp = mat[i]
+                mat[i] = mat[pivot]
+                mat[pivot] = temp
+                det = -det // Row swap negates determinant
+            }
+
+            det *= mat[i][i]
+
+            for (j in i + 1 until n) {
+                val factor = mat[j][i] / mat[i][i]
+                for (k in i until n) {
+                    mat[j][k] -= factor * mat[i][k]
+                }
+            }
+        }
+
+        return det
     }
 
-    fun det3(matriz: Array<DoubleArray>): Double {
-        val v1 = (matriz[0][0] * matriz[1][1] * matriz[2][2]) +
-                (matriz[0][1] * matriz[1][2] * matriz[2][0]) +
-                (matriz[0][2] * matriz[1][0] * matriz[2][1])
+    fun det2(matriz: Array<DoubleArray>): Double = determinant(matriz)
 
-        val v2 = (matriz[0][2] * matriz[1][1] * matriz[2][0]) +
-                (matriz[0][0] * matriz[1][2] * matriz[2][1]) +
-                (matriz[0][1] * matriz[1][0] * matriz[2][2])
+    fun det3(matriz: Array<DoubleArray>): Double = determinant(matriz)
 
-        return v1 - v2
-    }
-
-    fun det4(v: Array<DoubleArray>): Double {
-        val d1 = ((v[1][1] * v[2][2] * v[3][3]) + (v[1][2] * v[2][3] * v[3][1]) + (v[1][3] * v[2][1] * v[3][2])) -
-                ((v[1][3] * v[2][2] * v[3][1]) + (v[1][1] * v[2][3] * v[3][2]) + (v[1][2] * v[2][1] * v[3][3]))
-        val d2 = ((v[1][0] * v[2][2] * v[3][3]) + (v[1][2] * v[2][3] * v[3][0]) + (v[1][3] * v[2][0] * v[3][2])) -
-                ((v[1][3] * v[2][2] * v[3][0]) + (v[1][0] * v[2][3] * v[3][2]) + (v[1][2] * v[2][0] * v[3][3]))
-        val d3 = ((v[1][0] * v[2][1] * v[3][3]) + (v[1][1] * v[2][3] * v[3][0]) + (v[1][3] * v[2][0] * v[3][1])) -
-                ((v[1][3] * v[2][1] * v[3][0]) + (v[1][0] * v[2][3] * v[3][1]) + (v[1][1] * v[2][0] * v[3][3]))
-        val d4 = ((v[1][0] * v[2][1] * v[3][2]) + (v[1][1] * v[2][2] * v[3][0]) + (v[1][3] * v[2][0] * v[3][1])) -
-                ((v[1][2] * v[2][1] * v[3][0]) + (v[1][0] * v[2][2] * v[3][1]) + (v[1][1] * v[2][0] * v[3][2]))
-
-        return v[0][0] * (-1.0).pow(2.0) * d1 + v[0][1] * (-1.0).pow(3.0) * d2 +
-                v[0][2] * (-1.0).pow(4.0) * d3 + v[0][3] * (-1.0).pow(5.0) * d4
-    }
+    fun det4(v: Array<DoubleArray>): Double = determinant(v)
 }

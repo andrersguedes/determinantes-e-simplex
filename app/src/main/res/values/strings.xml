@@ -2,12 +2,29 @@
 <resources>
 
     <string name="app_name">Determinantes e Simplex</string>
-    <string name="val">Informe os valores da matriz</string>
+    <string name="matrix_info_prompt">Informe os valores da matriz</string>
     <string name="det2">Determinante 2 x 2</string>
     <string name="det3">Determinante 3 x 3</string>
     <string name="det4">Determinante 4 x 4</string>
     <string name="calc">Calcular</string>
     <string name="det">Determinante:</string>
+
+    <string name="det2_desc">Cálculo de determinante para matrizes 2x2.</string>
+    <string name="det3_desc">Cálculo de determinante para matrizes 3x3.</string>
+    <string name="det4_desc">Cálculo de determinante para matrizes 4x4.</string>
+    <string name="simplex_title">Método Simplex</string>
+    <string name="simplex_desc">Resolução de problemas de programação linear.</string>
+    <string name="mat2x2">Matrizes 2x2</string>
+    <string name="mat3x3">Matrizes 3x3</string>
+    <string name="mat4x4">Matrizes 4x4</string>
+    <string name="simplex">Simplex</string>
+    <string name="linear_programming">Programação Linear</string>
+    <string name="back_content_description">Back</string>
+    <string name="simplex_maximize_label">Maximizar Z = c₁x₁ + c₂x₂</string>
+    <string name="simplex_constraints_label">Restrições (≤ RHS)</string>
+    <string name="simplex_solve_button">Resolver Simplex</string>
+    <string name="simplex_optimal_solution">Solução Ótima</string>
+    <string name="result_label">Resultado</string>
 
     <string name="a00">a<sub>11</sub></string>
     <string name="a01">a<sub>12</sub></string>
