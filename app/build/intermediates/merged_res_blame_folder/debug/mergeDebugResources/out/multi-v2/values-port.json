@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "br.edu.fatecgarca.determinantes.app-mergeDebugResources-34:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/Users/andreguedes/.gradle/caches/9.6.0/transforms/910997d72fedf19a0ff4dbb39c1c5f86/transformed/appcompat-1.8.0/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

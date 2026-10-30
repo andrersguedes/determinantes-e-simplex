@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="a00">a<sub>11</sub></string>
+    <string name="a01">a<sub>12</sub></string>
+    <string name="a02">a<sub>13</sub></string>
+    <string name="a03">a<sub>14</sub></string>
+    <string name="a10">a<sub>21</sub></string>
+    <string name="a11">a<sub>22</sub></string>
+    <string name="a12">a<sub>23</sub></string>
+    <string name="a13">a<sub>24</sub></string>
+    <string name="a20">a<sub>31</sub></string>
+    <string name="a21">a<sub>32</sub></string>
+    <string name="a22">a<sub>33</sub></string>
+    <string name="a23">a<sub>34</sub></string>
+    <string name="a30">a<sub>41</sub></string>
+    <string name="a31">a<sub>42</sub></string>
+    <string name="a32">a<sub>43</sub></string>
+    <string name="a33">a<sub>44</sub></string>
+    <string name="app_name">Determinantes</string>
+    <string name="calc">Calcular</string>
+    <string name="det">Determinante:</string>
+    <string name="det2">Determinante 2 x 2</string>
+    <string name="det3">Determinante 3 x 3</string>
+    <string name="det4">Determinante 4 x 4</string>
+    <string name="val">Informe os valores da matriz</string>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        
+    </style>
+</resources>
