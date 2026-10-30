@@ -1,0 +1,26 @@
+# Android Studio / Gradle
+.gradle/
+/build/
+/app/build/
+/app/src/main/assets
+*.apk
+*.aar
+*.keystore
+
+# Eclipse
+.settings/
+bin/
+gen/
+.classpath
+.project
+
+# OS / Environment files
+.DS_Store
+Thumbs.db
+*.env
+
+# Added paths to ignore
+*.log
+/local.properties
+.idea/
+/captures/
