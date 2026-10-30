@@ -1,41 +1,62 @@
 package br.edu.fatecgarca.determinantessimplex
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import br.edu.fatecgarca.determinantessimplex.navigation.Screen
+import br.edu.fatecgarca.determinantessimplex.ui.screens.MainScreen
+import br.edu.fatecgarca.determinantessimplex.ui.screens.MatrixCalculatorScreen
+import br.edu.fatecgarca.determinantessimplex.ui.screens.SimplexScreen
+import br.edu.fatecgarca.determinantessimplex.ui.theme.DeterminantesSimplexTheme
 
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var btnDet2: Button
-    private lateinit var btnDet3: Button
-    private lateinit var btnDet4: Button
-
+class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Handle the splash screen transition.
         installSplashScreen()
-
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        btnDet2 = findViewById(R.id.btnDet2)
-        btnDet3 = findViewById(R.id.btnDet3)
-        btnDet4 = findViewById(R.id.btnDet4)
-
-        val intent = Intent(this, Det2::class.java)
-
-        btnDet2.setOnClickListener {
-            intent.putExtra("nome", btnDet2.text.toString())
-            startActivity(intent)
-        }
-        btnDet3.setOnClickListener {
-            intent.putExtra("nome", btnDet3.text.toString())
-            startActivity(intent)
-        }
-        btnDet4.setOnClickListener {
-            intent.putExtra("nome", btnDet4.text.toString())
-            startActivity(intent)
+        setContent {
+            DeterminantesSimplexTheme {
+                val navController = rememberNavController()
+                NavHost(navController = navController, startDestination = Screen.Main.route) {
+                    composable(Screen.Main.route) {
+                        MainScreen(
+                            onNavigateToDet2 = { navController.navigate(Screen.Det2.route) },
+                            onNavigateToDet3 = { navController.navigate(Screen.Det3.route) },
+                            onNavigateToDet4 = { navController.navigate(Screen.Det4.route) },
+                            onNavigateToSimplex = { navController.navigate(Screen.Simplex.route) }
+                        )
+                    }
+                    composable(Screen.Det2.route) {
+                        MatrixCalculatorScreen(
+                            title = "Determinante 2 x 2",
+                            dimension = 2,
+                            onBack = { navController.popBackStack() }
+                        )
+                    }
+                    composable(Screen.Det3.route) {
+                        MatrixCalculatorScreen(
+                            title = "Determinante 3 x 3",
+                            dimension = 3,
+                            onBack = { navController.popBackStack() }
+                        )
+                    }
+                    composable(Screen.Det4.route) {
+                        MatrixCalculatorScreen(
+                            title = "Determinante 4 x 4",
+                            dimension = 4,
+                            onBack = { navController.popBackStack() }
+                        )
+                    }
+                    composable(Screen.Simplex.route) {
+                        SimplexScreen(
+                            onBack = { navController.popBackStack() }
+                        )
+                    }
+                }
+            }
         }
     }
 }
