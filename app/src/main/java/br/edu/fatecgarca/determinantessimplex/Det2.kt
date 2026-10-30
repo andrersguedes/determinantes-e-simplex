@@ -43,7 +43,7 @@ class Det2 : AppCompatActivity(), View.OnClickListener {
                 edtDet3.text.toString().isEmpty() ||
                 edtDet4.text.toString().isEmpty()
             ) {
-                Toast.makeText(this, "Digite todos os valores da matriz!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.fill_all_values_error), Toast.LENGTH_SHORT).show()
             } else {
                 val matriz = arrayOf(
                     doubleArrayOf(

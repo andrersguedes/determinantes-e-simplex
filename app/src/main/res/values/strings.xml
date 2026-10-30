@@ -29,5 +29,6 @@
     <string name="a32">a<sub>43</sub></string>
     <string name="a33">a<sub>44</sub></string>
 
+    <string name="fill_all_values_error">Digite todos os valores da matriz!</string>
 
 </resources>

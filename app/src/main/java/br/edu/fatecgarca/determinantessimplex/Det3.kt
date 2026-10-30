@@ -58,7 +58,7 @@ class Det3 : AppCompatActivity(), View.OnClickListener {
                 edtDet8.text.toString().isEmpty() ||
                 edtDet9.text.toString().isEmpty()
             ) {
-                Toast.makeText(this, "Digite todos os valores da matriz!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.fill_all_values_error), Toast.LENGTH_SHORT).show()
             } else {
                 val matriz = arrayOf(
                     doubleArrayOf(

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.edu.fatecgarca.determinantessimplex"
-    android:versionCode="1"
-    android:versionName="1.0">
+    package="br.edu.fatecgarca.determinantessimplex">
 
     <application
         android:allowBackup="true"
@@ -19,9 +17,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="Det2" />
-        <activity android:name="Det3" />
-        <activity android:name="Det4" />
+        <activity
+            android:name="Det2"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name="Det3"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name="Det4"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
