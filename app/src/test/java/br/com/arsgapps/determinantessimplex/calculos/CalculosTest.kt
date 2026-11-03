@@ -1,4 +1,4 @@
-package br.edu.fatecgarca.determinantessimplex.calculos
+package br.com.arsgapps.determinantessimplex.calculos
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

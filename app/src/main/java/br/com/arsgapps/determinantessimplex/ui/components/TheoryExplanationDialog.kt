@@ -1,4 +1,4 @@
-package br.edu.fatecgarca.determinantessimplex.ui.components
+package br.com.arsgapps.determinantessimplex.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -15,8 +15,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.edu.fatecgarca.determinantessimplex.R
-import br.edu.fatecgarca.determinantessimplex.ui.theme.DeterminantesSimplexTheme
+import br.com.arsgapps.determinantessimplex.R
+import br.com.arsgapps.determinantessimplex.ui.theme.DeterminantesSimplexTheme
 
 enum class MethodType {
     DET_2X2, DET_3X3, DET_4X4, SIMPLEX

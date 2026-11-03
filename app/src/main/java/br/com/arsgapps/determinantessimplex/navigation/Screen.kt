@@ -1,4 +1,4 @@
-package br.edu.fatecgarca.determinantessimplex.navigation
+package br.com.arsgapps.determinantessimplex.navigation
 
 sealed class Screen(val route: String) {
     object Main : Screen("main")

@@ -1,4 +1,4 @@
-package br.edu.fatecgarca.determinantessimplex.ui.screens
+package br.com.arsgapps.determinantessimplex.ui.screens
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.*
@@ -18,11 +18,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import br.edu.fatecgarca.determinantessimplex.R
-import br.edu.fatecgarca.determinantessimplex.calculos.Calculos
-import br.edu.fatecgarca.determinantessimplex.ui.components.MethodType
-import br.edu.fatecgarca.determinantessimplex.ui.components.TheoryExplanationDialog
-import br.edu.fatecgarca.determinantessimplex.ui.theme.DeterminantesSimplexTheme
+import br.com.arsgapps.determinantessimplex.R
+import br.com.arsgapps.determinantessimplex.calculos.Calculos
+import br.com.arsgapps.determinantessimplex.ui.components.MethodType
+import br.com.arsgapps.determinantessimplex.ui.components.TheoryExplanationDialog
+import br.com.arsgapps.determinantessimplex.ui.theme.DeterminantesSimplexTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

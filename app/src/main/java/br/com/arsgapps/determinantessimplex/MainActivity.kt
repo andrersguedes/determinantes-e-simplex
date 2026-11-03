@@ -1,4 +1,4 @@
-package br.edu.fatecgarca.determinantessimplex
+package br.com.arsgapps.determinantessimplex
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,11 +7,11 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import br.edu.fatecgarca.determinantessimplex.navigation.Screen
-import br.edu.fatecgarca.determinantessimplex.ui.screens.MainScreen
-import br.edu.fatecgarca.determinantessimplex.ui.screens.MatrixCalculatorScreen
-import br.edu.fatecgarca.determinantessimplex.ui.screens.SimplexScreen
-import br.edu.fatecgarca.determinantessimplex.ui.theme.DeterminantesSimplexTheme
+import br.com.arsgapps.determinantessimplex.navigation.Screen
+import br.com.arsgapps.determinantessimplex.ui.screens.MainScreen
+import br.com.arsgapps.determinantessimplex.ui.screens.MatrixCalculatorScreen
+import br.com.arsgapps.determinantessimplex.ui.screens.SimplexScreen
+import br.com.arsgapps.determinantessimplex.ui.theme.DeterminantesSimplexTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

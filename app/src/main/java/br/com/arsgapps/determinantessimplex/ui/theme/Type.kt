@@ -1,4 +1,4 @@
-package br.edu.fatecgarca.determinantessimplex.ui.theme
+package br.com.arsgapps.determinantessimplex.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
