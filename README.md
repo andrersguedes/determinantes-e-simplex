@@ -1,7 +1,7 @@
 <p align="center">
   <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" alt="Determinantes e Simplex App Icon" width="120" height="120">
 </p>
-<h1 align="center">Determinantes e Simplex</h1>
+<h1 align="center">Determinants & Simplex</h1>
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=br.com.arsgapps.determinantessimplex"><img src="https://img.shields.io/badge/Google%20Play-Available-brightgreen?style=for-the-badge&logo=google-play" alt="Google Play"></a>
@@ -10,7 +10,7 @@
   <a href="https://developer.android.com/jetpack/compose"><img src="https://img.shields.io/badge/Jetpack%20Compose-UI-blue?style=for-the-badge&logo=jetpackcompose" alt="Jetpack Compose"></a>
 </p>
 
-**Determinantes e Simplex** is a modern, high-performance Android application built for students, engineers, and mathematics professionals. It solves matrix determinants ($2\times2$, $3\times3$, $4\times4$, and general $N\timesN$ via Gaussian Elimination with Partial Pivoting) and linear programming problems using the Simplex Method.
+**Determinants & Simplex** is a modern, high-performance Android application built for students, engineers, and mathematics professionals. It solves matrix determinants ($2\times2$, $3\times3$, $4\times4$, and general $N\timesN$ via Gaussian Elimination with Partial Pivoting) and linear programming problems using the Simplex Method.
 
 Available in **Portuguese**, **English**, and **Spanish**.
 
@@ -30,7 +30,7 @@ Available in **Portuguese**, **English**, and **Spanish**.
 ## 📥 Get the App on Google Play
 
 You can download the official release directly from the Google Play Store:
-[🔗 Determinantes e Simplex on Google Play](https://play.google.com/store/apps/details?id=br.com.arsgapps.determinantessimplex)
+[🔗 Determinants & Simplex on Google Play](https://play.google.com/store/apps/details?id=br.com.arsgapps.determinantessimplex)
 
 ---
 
@@ -57,8 +57,8 @@ We follow standard Git Flow practices to ensure a clean and collaborative develo
 
 2. **Clone Your Fork**
    ```bash
-   git clone https://github.com/YOUR-USERNAME/determinantes-e-simplex.git
-   cd determinantes-e-simplex
+   git clone https://github.com/YOUR-USERNAME/determinants-simplex.git
+   cd determinants-simplex
    ```
 
 3. **Create a Feature Branch**
