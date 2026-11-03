@@ -62,7 +62,7 @@ fun SimplexScreen(
                 },
                 actions = {
                     IconButton(onClick = { showTheory = true }) {
-                        Icon(Icons.Default.Info, contentDescription = "Teoria e Explicação")
+                        Icon(Icons.Default.Info, contentDescription = stringResource(R.string.theory_content_description))
                     }
                 }
             )
@@ -227,7 +227,7 @@ fun SimplexScreen(
                         )
                         Spacer(modifier = Modifier.height(4.dp))
                         Text(
-                            text = "Z (Max) = ${result!!.optimalValue}",
+                            text = stringResource(R.string.z_max_format, result!!.optimalValue),
                             style = MaterialTheme.typography.titleLarge,
                             color = MaterialTheme.colorScheme.primary
                         )
@@ -236,7 +236,7 @@ fun SimplexScreen(
                             horizontalArrangement = Arrangement.SpaceEvenly
                         ) {
                             for ((varName, value) in result!!.variables) {
-                                Text(text = "$varName = $value", style = MaterialTheme.typography.bodyMedium)
+                                Text(text = stringResource(R.string.var_value_format, varName, value), style = MaterialTheme.typography.bodyMedium)
                             }
                         }
                     }

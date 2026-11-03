@@ -3,6 +3,7 @@ package br.com.arsgapps.determinantessimplex
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.ui.res.stringResource
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -31,21 +32,21 @@ class MainActivity : ComponentActivity() {
                     }
                     composable(Screen.Det2.route) {
                         MatrixCalculatorScreen(
-                            title = "Determinante 2 x 2",
+                            title = stringResource(R.string.det2),
                             dimension = 2,
                             onBack = { navController.popBackStack() }
                         )
                     }
                     composable(Screen.Det3.route) {
                         MatrixCalculatorScreen(
-                            title = "Determinante 3 x 3",
+                            title = stringResource(R.string.det3),
                             dimension = 3,
                             onBack = { navController.popBackStack() }
                         )
                     }
                     composable(Screen.Det4.route) {
                         MatrixCalculatorScreen(
-                            title = "Determinante 4 x 4",
+                            title = stringResource(R.string.det4),
                             dimension = 4,
                             onBack = { navController.popBackStack() }
                         )

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Determinantes y Simplex</string>
+    <string name="matrix_info_prompt">Ingrese los valores de la matriz</string>
+    <string name="det2">Determinante 2 x 2</string>
+    <string name="det3">Determinante 3 x 3</string>
+    <string name="det4">Determinante 4 x 4</string>
+    <string name="calc">Calcular</string>
+    <string name="det">Determinante:</string>
+
+    <string name="det2_desc">Cálculo de determinante para matrices 2x2.</string>
+    <string name="det3_desc">Cálculo de determinante para matrices 3x3.</string>
+    <string name="det4_desc">Cálculo de determinante para matrices 4x4.</string>
+    <string name="simplex_title">Método Simplex</string>
+    <string name="simplex_desc">Resolución de problemas de programación lineal.</string>
+    <string name="mat2x2">Matrices 2x2</string>
+    <string name="mat3x3">Matrices 3x3</string>
+    <string name="mat4x4">Matrices 4x4</string>
+    <string name="simplex">Simplex</string>
+    <string name="linear_programming">Programación Lineal</string>
+    <string name="back_content_description">Atrás</string>
+    <string name="simplex_maximize_label">Maximizar Z = c₁x₁ + c₂x₂</string>
+    <string name="simplex_constraints_label">Restricciones (≤ RHS)</string>
+    <string name="simplex_solve_button">Resolver Simplex</string>
+    <string name="simplex_optimal_solution">Solución Óptima</string>
+    <string name="result_label">Resultado</string>
+
+    <string name="theory_det2_title">Determinante de Matriz 2x2</string>
+    <string name="theory_det2_text">El determinante de una matriz cuadrada de orden 2 se calcula mediante la diferencia entre el producto de los elementos de la diagonal principal y el producto de los elementos de la diagonal secundaria.\n\nFórmula:\nDet = (a₁₁ · a₂₂) - (a₁₂ · a₂₁)</string>
+    <string name="example_det2_text">Ejemplo Práctico:\nMatriz A = [[1, 2], [3, 4]]\nDet = (1 · 4) - (2 · 3) = 4 - 6 = -2.</string>
+
+    <string name="theory_det3_title">Determinante de Matriz 3x3</string>
+    <string name="theory_det3_text">Para matrices 3x3, se puede utilizar la Regla de Sarrus: se repiten las dos primeras columnas a la derecha, se suman los productos de las diagonales principales y se restan los productos de las diagonales secundarias.</string>
+    <string name="example_det3_text">Ejemplo Práctico:\nMatriz 3x3 con diagonal principal y secundaria.\nDet = V₁ - V₂.</string>
+
+    <string name="theory_det4_title">Determinante de Matriz 4x4</string>
+    <string name="theory_det4_text">Para matrices de orden 4x4 o superior, se utiliza el Teorema de Laplace (expansión por cofactores) o Eliminación de Gauss con pivoteo para calcular el determinante con eficiencia y precisión.</string>
+    <string name="example_det4_text">Ejemplo Práctico:\nLa aplicación aplica Eliminación de Gauss con Pivoteo Parcial para triangular la matriz y calcular el producto de la diagonal principal con complejidad O(N³).</string>
+
+    <string name="theory_simplex_title">Método Simplex (Programación Lineal)</string>
+    <string name="theory_simplex_text">El Método Simplex es un algoritmo iterativo para resolver problemas de programación lineal, encontrando el punto óptimo (máximo o mínimo) en un poliedro de restricciones lineales.\n\nPasos:\n1. Montaje del Tableau inicial con variables de holgura.\n2. Identificación de la columna pivote (menor valor en la fila de costos).\n3. Prueba de la razón mínima para encontrar la fila pivote.\n4. Operaciones elementales de fila hasta que todos los costos sean no negativos.</string>
+    <string name="example_simplex_text">Ejemplo:\nMaximizar Z = 3x₁ + 5x₂\nSujeto a:\nx₁ ≤ 8\n2x₂ ≤ 12\nSolución Ótima: x₁ = 2, x₂ = 6, Z_max = 36.</string>
+
+    <string name="theory_section_header">📚 Fundamentación Teórica</string>
+    <string name="example_section_header">💡 Ejemplo Resuelto</string>
+    <string name="understand_button">Entendido</string>
+    <string name="theory_content_description">Teoría y Explicación</string>
+
+    <string name="a00">a<sub>11</sub></string>
+    <string name="a01">a<sub>12</sub></string>
+    <string name="a02">a<sub>13</sub></string>
+    <string name="a03">a<sub>14</sub></string>
+
+    <string name="a10">a<sub>21</sub></string>
+    <string name="a11">a<sub>22</sub></string>
+    <string name="a12">a<sub>23</sub></string>
+    <string name="a13">a<sub>24</sub></string>
+
+    <string name="a20">a<sub>31</sub></string>
+    <string name="a21">a<sub>32</sub></string>
+    <string name="a22">a<sub>33</sub></string>
+    <string name="a23">a<sub>34</sub></string>
+
+    <string name="a30">a<sub>41</sub></string>
+    <string name="a31">a<sub>42</sub></string>
+    <string name="a32">a<sub>43</sub></string>
+    <string name="a33">a<sub>44</sub></string>
+
+    <string name="fill_all_values_error">¡Ingrese todos los valores de la matriz!</string>
+    <string name="z_max_format">Z (Max) = %s</string>
+    <string name="var_value_format">%s = %s</string>
+</resources>

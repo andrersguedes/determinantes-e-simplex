@@ -64,7 +64,7 @@ fun MatrixCalculatorScreen(
                 },
                 actions = {
                     IconButton(onClick = { showTheory = true }) {
-                        Icon(Icons.Default.Info, contentDescription = "Teoria e Explicação")
+                        Icon(Icons.Default.Info, contentDescription = stringResource(R.string.theory_content_description))
                     }
                 }
             )
@@ -181,7 +181,7 @@ fun MatrixCalculatorScreen(
 fun MatrixCalculatorScreenPreview() {
     DeterminantesSimplexTheme {
         MatrixCalculatorScreen(
-            title = "Determinante 3 x 3",
+            title = stringResource(R.string.det3),
             dimension = 3,
             onBack = {}
         )

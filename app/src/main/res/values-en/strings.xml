@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Determinants &amp; Simplex</string>
+    <string name="matrix_info_prompt">Enter matrix values</string>
+    <string name="det2">2 x 2 Determinant</string>
+    <string name="det3">3 x 3 Determinant</string>
+    <string name="det4">4 x 4 Determinant</string>
+    <string name="calc">Calculate</string>
+    <string name="det">Determinant:</string>
+
+    <string name="det2_desc">Determinant calculation for 2x2 matrices.</string>
+    <string name="det3_desc">Determinant calculation for 3x3 matrices.</string>
+    <string name="det4_desc">Determinant calculation for 4x4 matrices.</string>
+    <string name="simplex_title">Simplex Method</string>
+    <string name="simplex_desc">Solving linear programming problems.</string>
+    <string name="mat2x2">2x2 Matrices</string>
+    <string name="mat3x3">3x3 Matrices</string>
+    <string name="mat4x4">4x4 Matrices</string>
+    <string name="simplex">Simplex</string>
+    <string name="linear_programming">Linear Programming</string>
+    <string name="back_content_description">Back</string>
+    <string name="simplex_maximize_label">Maximize Z = c₁x₁ + c₂x₂</string>
+    <string name="simplex_constraints_label">Constraints (≤ RHS)</string>
+    <string name="simplex_solve_button">Solve Simplex</string>
+    <string name="simplex_optimal_solution">Optimal Solution</string>
+    <string name="result_label">Result</string>
+
+    <string name="theory_det2_title">2x2 Matrix Determinant</string>
+    <string name="theory_det2_text">The determinant of a 2nd order square matrix is calculated by the difference between the product of the elements of the main diagonal and the product of the elements of the secondary diagonal.\n\nFormula:\nDet = (a₁₁ · a₂₂) - (a₁₂ · a₂₁)</string>
+    <string name="example_det2_text">Practical Example:\nMatrix A = [[1, 2], [3, 4]]\nDet = (1 · 4) - (2 · 3) = 4 - 6 = -2.</string>
+
+    <string name="theory_det3_title">3x3 Matrix Determinant</string>
+    <string name="theory_det3_text">For 3x3 matrices, Sarrus\'s Rule can be used: repeat the first two columns to the right, add the products of the main diagonals and subtract the products of the secondary diagonals.</string>
+    <string name="example_det3_text">Practical Example:\n3x3 Matrix with main and secondary diagonal.\nDet = V₁ - V₂.</string>
+
+    <string name="theory_det4_title">4x4 Matrix Determinant</string>
+    <string name="theory_det4_text">For matrices of order 4x4 or higher, Laplace\'s Theorem (cofactor expansion) or Gaussian Elimination with pivoting is used to calculate the determinant efficiently and accurately.</string>
+    <string name="example_det4_text">Practical Example:\nThe app applies Gaussian Elimination with Partial Pivoting to triangularize the matrix and calculate the main diagonal product with O(N³) complexity.</string>
+
+    <string name="theory_simplex_title">Simplex Method (Linear Programming)</string>
+    <string name="theory_simplex_text">The Simplex Method is an iterative algorithm to solve linear programming problems, finding the optimal point (maximum or minimum) in a polyhedron of linear constraints.\n\nSteps:\n1. Setup the initial Tableau with slack variables.\n2. Identify the pivot column (smallest value in the cost row).\n3. Minimum ratio test to find the pivot row.\n4. Elementary row operations until all costs are non-negative.</string>
+    <string name="example_simplex_text">Example:\nMaximize Z = 3x₁ + 5x₂\nSubject to:\nx₁ ≤ 8\n2x₂ ≤ 12\nOptimal Solution: x₁ = 2, x₂ = 6, Z_max = 36.</string>
+
+    <string name="theory_section_header">📚 Theoretical Foundation</string>
+    <string name="example_section_header">💡 Solved Example</string>
+    <string name="understand_button">Got it</string>
+    <string name="theory_content_description">Theory and Explanation</string>
+
+    <string name="a00">a<sub>11</sub></string>
+    <string name="a01">a<sub>12</sub></string>
+    <string name="a02">a<sub>13</sub></string>
+    <string name="a03">a<sub>14</sub></string>
+
+    <string name="a10">a<sub>21</sub></string>
+    <string name="a11">a<sub>22</sub></string>
+    <string name="a12">a<sub>23</sub></string>
+    <string name="a13">a<sub>24</sub></string>
+
+    <string name="a20">a<sub>31</sub></string>
+    <string name="a21">a<sub>32</sub></string>
+    <string name="a22">a<sub>33</sub></string>
+    <string name="a23">a<sub>34</sub></string>
+
+    <string name="a30">a<sub>41</sub></string>
+    <string name="a31">a<sub>42</sub></string>
+    <string name="a32">a<sub>43</sub></string>
+    <string name="a33">a<sub>44</sub></string>
+
+    <string name="fill_all_values_error">Please enter all matrix values!</string>
+    <string name="z_max_format">Z (Max) = %s</string>
+    <string name="var_value_format">%s = %s</string>
+</resources>
