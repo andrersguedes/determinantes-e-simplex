@@ -7,6 +7,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -19,6 +20,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.edu.fatecgarca.determinantessimplex.R
 import br.edu.fatecgarca.determinantessimplex.calculos.Calculos
+import br.edu.fatecgarca.determinantessimplex.ui.components.MethodType
+import br.edu.fatecgarca.determinantessimplex.ui.components.TheoryExplanationDialog
 import br.edu.fatecgarca.determinantessimplex.ui.theme.DeterminantesSimplexTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -33,8 +36,22 @@ fun MatrixCalculatorScreen(
         mutableStateOf(Array(dimension) { Array(dimension) { mutableStateOf("") } })
     }
     var resultText by remember { mutableStateOf<String?>(null) }
+    var showTheory by remember { mutableStateOf(false) }
     val calculos = remember { Calculos() }
     val errorMessage = stringResource(R.string.fill_all_values_error)
+
+    val methodType = when (dimension) {
+        2 -> MethodType.DET_2X2
+        3 -> MethodType.DET_3X3
+        else -> MethodType.DET_4X4
+    }
+
+    if (showTheory) {
+        TheoryExplanationDialog(
+            methodType = methodType,
+            onDismiss = { showTheory = false }
+        )
+    }
 
     Scaffold(
         topBar = {
@@ -43,6 +60,11 @@ fun MatrixCalculatorScreen(
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.Default.ArrowBack, contentDescription = stringResource(R.string.back_content_description))
+                    }
+                },
+                actions = {
+                    IconButton(onClick = { showTheory = true }) {
+                        Icon(Icons.Default.Info, contentDescription = "Teoria e Explicação")
                     }
                 }
             )

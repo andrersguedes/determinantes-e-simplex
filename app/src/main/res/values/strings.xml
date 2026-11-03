@@ -19,12 +19,33 @@
     <string name="mat4x4">Matrizes 4x4</string>
     <string name="simplex">Simplex</string>
     <string name="linear_programming">Programação Linear</string>
-    <string name="back_content_description">Voltar</string>
+    <string name="back_content_description">Back</string>
     <string name="simplex_maximize_label">Maximizar Z = c₁x₁ + c₂x₂</string>
     <string name="simplex_constraints_label">Restrições (≤ RHS)</string>
     <string name="simplex_solve_button">Resolver Simplex</string>
     <string name="simplex_optimal_solution">Solução Ótima</string>
     <string name="result_label">Resultado</string>
+
+    <string name="theory_det2_title">Determinante de Matriz 2x2</string>
+    <string name="theory_det2_text">O determinante de uma matriz quadrada de ordem 2 é calculado pela diferença entre o produto dos elementos da diagonal principal e o produto dos elementos da diagonal secundária.\n\nFórmula:\nDet = (a₁₁ · a₂₂) - (a₁₂ · a₂₁)</string>
+    <string name="example_det2_text">Exemplo Prático:\nMatriz A = [[1, 2], [3, 4]]\nDet = (1 · 4) - (2 · 3) = 4 - 6 = -2.</string>
+
+    <string name="theory_det3_title">Determinante de Matriz 3x3</string>
+    <string name="theory_det3_text">Para matrizes 3x3, pode-se utilizar a Regra de Sarrus: repete-se as duas primeiras colunas à direita, somam-se os produtos das diagonais principais e subtraem-se os produtos das diagonais secundárias.</string>
+    <string name="example_det3_text">Exemplo Prático:\nMatriz 3x3 com diagonal principal e secundária.\nDet = V₁ - V₂.</string>
+
+    <string name="theory_det4_title">Determinante de Matriz 4x4</string>
+    <string name="theory_det4_text">Para matrizes de ordem 4x4 ou superior, utiliza-se o Teorema de Laplace (expansão por cofatores) ou Eliminação de Gauss com pivoteamento para calcular o determinante com eficiência e precisão.</string>
+    <string name="example_det4_text">Exemplo Prático:\nO aplicativo aplica Eliminação de Gauss com Pivoteamento Parcial para triangular a matriz e calcular o produto da diagonal principal com complexidade O(N³).</string>
+
+    <string name="theory_simplex_title">Método Simplex (Programação Linear)</string>
+    <string name="theory_simplex_text">O Método Simplex é um algoritmo iterativo para resolver problemas de programação linear, encontrando o ponto ótimo (máximo ou mínimo) em um poliedro de restrições lineares.\n\nPassos:\n1. Montagem do Tableau inicial com variáveis de folga.\n2. Identificação da coluna pivô (menor valor na linha de custos).\n3. Teste da razão mínima para encontrar a linha pivô.\n4. Operações elementares de linha até que todos os custos sejam não-negativos.</string>
+    <string name="example_simplex_text">Exemplo:\nMaximizar Z = 3x₁ + 5x₂\nSujeito a:\nx₁ ≤ 8\n2x₂ ≤ 12\nSolução Ótima: x₁ = 2, x₂ = 6, Z_max = 36.</string>
+
+    <string name="theory_section_header">📚 Fundamentação Teórica</string>
+    <string name="example_section_header">💡 Exemplo Resolvido</string>
+    <string name="understand_button">Entendi</string>
+    <string name="theory_content_description">Teoria e Explicação</string>
 
     <string name="a00">a<sub>11</sub></string>
     <string name="a01">a<sub>12</sub></string>

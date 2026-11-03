@@ -6,16 +6,21 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import br.edu.fatecgarca.determinantessimplex.R
 import br.edu.fatecgarca.determinantessimplex.calculos.SimplexCalculos
 import br.edu.fatecgarca.determinantessimplex.calculos.SimplexResult
+import br.edu.fatecgarca.determinantessimplex.ui.components.MethodType
+import br.edu.fatecgarca.determinantessimplex.ui.components.TheoryExplanationDialog
 import br.edu.fatecgarca.determinantessimplex.ui.theme.DeterminantesSimplexTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -36,15 +41,28 @@ fun SimplexScreen(
     var b2 by remember { mutableStateOf("12") }
 
     var result by remember { mutableStateOf<SimplexResult?>(null) }
+    var showTheory by remember { mutableStateOf(false) }
     val solver = remember { SimplexCalculos() }
+
+    if (showTheory) {
+        TheoryExplanationDialog(
+            methodType = MethodType.SIMPLEX,
+            onDismiss = { showTheory = false }
+        )
+    }
 
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Método Simplex") },
+                title = { Text(stringResource(R.string.simplex_title)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.back_content_description))
+                    }
+                },
+                actions = {
+                    IconButton(onClick = { showTheory = true }) {
+                        Icon(Icons.Default.Info, contentDescription = "Teoria e Explicação")
                     }
                 }
             )
@@ -60,7 +78,7 @@ fun SimplexScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Maximizar Z = c₁x₁ + c₂x₂",
+                text = stringResource(R.string.simplex_maximize_label),
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.primary
             )
@@ -88,7 +106,7 @@ fun SimplexScreen(
             }
 
             Text(
-                text = "Restrições (≤ RHS)",
+                text = stringResource(R.string.simplex_constraints_label),
                 style = MaterialTheme.typography.titleMedium,
                 color = MaterialTheme.colorScheme.primary
             )
@@ -188,7 +206,7 @@ fun SimplexScreen(
                 ),
                 shape = MaterialTheme.shapes.medium
             ) {
-                Text("Resolver Simplex", style = MaterialTheme.typography.titleMedium)
+                Text(stringResource(R.string.simplex_solve_button), style = MaterialTheme.typography.titleMedium)
             }
 
             if (result != null) {
@@ -204,7 +222,7 @@ fun SimplexScreen(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text(
-                            text = if (result!!.isOptimal) "Solução Ótima" else "Resultado",
+                            text = if (result!!.isOptimal) stringResource(R.string.simplex_optimal_solution) else stringResource(R.string.result_label),
                             style = MaterialTheme.typography.titleSmall
                         )
                         Spacer(modifier = Modifier.height(4.dp))
